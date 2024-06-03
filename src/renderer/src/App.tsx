@@ -7,15 +7,16 @@ function App(): JSX.Element {
   const [sidebar, setSideBar] = useState<boolean>(true)
   const [sidebarSmall, setSideBarSmall] = useState<boolean>(false)
 
-  const handleSidebar = () => {
+  const handleSidebar = (): void => {
     setSideBar(false)
     setSideBarSmall(true)
   }
 
-  const handleSidebarSmall = () => {
+  const handleSidebarSmall = (): void => {
     setSideBarSmall(false)
     setSideBar(true)
   }
+
   return (
     <>
       <div className=" bg-gradient-to-tr flex test  from-indigo-400 via-purple-500 to-fuchsia-500 bg-cover h-screen w-screen">
