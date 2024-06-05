@@ -23,30 +23,34 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
+    "@types/electron": "^1.6.10",
     "electron-updater": "^6.1.7",
     "lucide-react": "^0.383.0",
-    "zustand": "^4.5.2"
+    "patch-package": "^8.0.0"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
     "@electron-toolkit/eslint-config-ts": "^1.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
-    "@types/node": "^18.19.9",
+    "@types/node": "^18.19.34",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
-    "electron": "^28.2.0",
+    "axios": "^1.7.2",
+    "electron": "^28.3.3",
     "electron-builder": "^24.9.1",
     "electron-vite": "^2.0.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
+    "framer-motion": "^11.2.10",
     "postcss": "^8.4.38",
     "prettier": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "typescript": "^5.4.5",
+    "vite": "^5.0.12",
+    "zustand": "^4.5.2"
   }
 }

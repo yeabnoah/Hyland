@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        text1: '#191825'
+        secondary: '#161618',
+        text1: '#191825',
+        test: '#1b1b1f',
+        background: '#444b4b'
       },
       backgroundImage: {
         music: "url('resources/icon.png')"

@@ -1,98 +1,129 @@
-import { useState } from 'react'
-import mavric from './assets/images/jjj.jpg'
-import { CalendarHeart, HardDrive, Menu, PlusSquare, Search } from 'lucide-react'
-// import SideBar from './components/sidebar'
+import {
+  BotMessageSquare,
+  FileText,
+  Flame,
+  Folder,
+  History,
+  Import,
+  LayoutDashboard,
+  Music,
+  PlusSquare,
+  Telescope,
+  Timer
+} from 'lucide-react'
+import study from './assets/images/bg-study.svg'
 
 function App(): JSX.Element {
-  const [sidebar, setSideBar] = useState<boolean>(true)
-  const [sidebarSmall, setSideBarSmall] = useState<boolean>(false)
-
-  const handleSidebar = (): void => {
-    setSideBar(false)
-    setSideBarSmall(true)
-  }
-
-  const handleSidebarSmall = (): void => {
-    setSideBarSmall(false)
-    setSideBar(true)
-  }
-
   return (
     <>
-      <div className=" bg-gradient-to-tr flex test  from-indigo-400 via-purple-500 to-fuchsia-500 bg-cover h-screen w-screen">
-        <div
-          className={`h-full w-56 flex flex-col justify-between  transition-transform transform  bg-text1 ${sidebar ? 'block' : 'hidden'}`}
-        >
-          <div className=" flex justify-between mx-5 items-center mt-5">
-            <h3 className=" text-purple-400  text-xl font-extrabold">Hyland</h3>
-            <Menu onClick={handleSidebar} className=" text-white" size={18} />
+      <div className=" flex bg-cover h-screen w-screen">
+        <div className="h-full w-56 flex flex-col transition-transform transform px-5 py-5">
+          <div className=" flex justify-start items-center text-gray-200 gap-2">
+            <Flame className=" text-purple-400" />
+            <h4 className="  text-purple-400">Shama Studies</h4>
           </div>
 
-          <div className=" justify-start flex items-center my-5">
-            <div className=" flex-col flex w-full">
-              <button className=" bg-gradient-to-r justify-center gap-2 items-center flex from-indigo-500 to-purple-500 py-[5px] mx-5 my-1 rounded-md">
-                <CalendarHeart size={18} />
-                Favorites
+          <div className=" mt-7 flex gap-2 items-center">
+            <LayoutDashboard className=" text-gray-200" size={17} />
+            <h4 className=" text-gray-200 text-sm">Tools</h4>
+          </div>
+
+          <div className=" mt-3">
+            <div className="group">
+              <button className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300">
+                <FileText
+                  className="child group-hover:text-purple-400 group-hover:text-lg text-gray-200 group-hover:-translate-y-1 duration-300"
+                  size={17}
+                />
+                <h4 className="child group-hover:text-purple-400 text-gray-200 text-sm group-hover:-translate-y-1 duration-300">
+                  Reader
+                </h4>
               </button>
-              <button className=" bg-gradient-to-r justify-center gap-2 items-center flex from-indigo-500 to-purple-500 py-[5px] mx-5 my-1 rounded-md">
-                <HardDrive size={18} />
-                My Drive
+            </div>
+
+            <div className="group">
+              <button className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300">
+                <Music
+                  className="child group-hover:text-purple-400 group-hover:text-lg text-gray-200 group-hover:-translate-y-1 duration-300"
+                  size={17}
+                />
+                <h4 className="child group-hover:text-purple-400 text-gray-200 text-sm group-hover:-translate-y-1 duration-300">
+                  Music
+                </h4>
               </button>
-              <button className=" bg-gradient-to-r justify-center gap-2 items-center flex from-indigo-500 to-purple-500 py-[5px] mx-5 my-1 rounded-md">
-                <PlusSquare size={18} />
-                Add Music
+            </div>
+
+            <div className="group">
+              <button className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300">
+                <Timer
+                  className="child group-hover:text-purple-400 group-hover:text-lg text-gray-200 group-hover:-translate-y-1 duration-300"
+                  size={17}
+                />
+                <h4 className="child group-hover:text-purple-400 text-gray-200 text-sm group-hover:-translate-y-1 duration-300">
+                  Timer
+                </h4>
+              </button>
+            </div>
+
+            <div className="group">
+              <button className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300">
+                <Folder
+                  className="child group-hover:text-purple-400 group-hover:text-lg text-gray-200 group-hover:-translate-y-1 duration-300"
+                  size={17}
+                />
+                <h4 className="child group-hover:text-purple-400 text-gray-200 text-sm group-hover:-translate-y-1 duration-300">
+                  My Drive
+                </h4>
+              </button>
+            </div>
+
+            <div className="group">
+              <button className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300">
+                <BotMessageSquare
+                  className="child group-hover:text-purple-400 group-hover:text-lg text-gray-200 group-hover:-translate-y-1 duration-300"
+                  size={17}
+                />
+                <h4 className="child group-hover:text-purple-400 text-gray-200 text-sm group-hover:-translate-y-1 duration-300">
+                  Buddy
+                </h4>
               </button>
             </div>
           </div>
 
-          <div className=" justify-center flex items-center mb-1">
-            <p className=" text-gray-400 text-xs text-center">copyright @2024</p>
+          <div className=" mt-5 flex gap-2 items-center">
+            <Telescope className=" text-gray-200" size={17} />
+            <h4 className=" text-gray-200 text-sm">Explore</h4>
           </div>
         </div>
 
-        <div
-          className={`h-full flex flex-col px-5 justify-between  transition-transform transform  bg-text1 ${sidebarSmall ? 'block' : 'hidden'} `}
-        >
-          <div className=" flex justify-center items-center mt-5">
-            <Menu onClick={handleSidebarSmall} className=" text-white" size={18} />
+        <div className="flex-1 mt-5 mx-5">
+          <h2 className=" font-semibold text-xl text-gray-200">My Desk</h2>
+
+          <div className=" justify-center flex items-center">
+            <img src={study} className=" h-52 w-max mt-[16%] justify-center items-center" />
           </div>
 
-          <div className=" justify-start flex items-center my-5">
-            <div className=" flex-col flex w-full">
-              <button className=" justify-center gap-2 items-center flex py-[5px] my-1 rounded-md">
-                <CalendarHeart size={18} className=" text-purple-500" />
+          <div className=" flex justify-center items-center">
+            <div className=" flex gap-2">
+              <button className="group">
+                <div className=" flex items-center hover:-translate-y-1 duration-200 justify-center gap-2 hover:bg-purple-500 bg-purple-200 py-2 px-2 rounded-md">
+                  <Import className=" text-secondary" size={18} />
+                  <h4 className=" text-secondary text-sm">Import Desk</h4>
+                </div>
               </button>
-              <button className=" justify-center gap-2 items-center flex py-[5px] my-1 rounded-md">
-                <HardDrive size={18} className=" text-purple-500" />
+
+              <button className="group">
+                <div className=" flex items-center justify-center gap-2 bg-purple-200 py-2 px-2 rounded-md hover:-translate-y-1 duration-200 hover:bg-purple-500">
+                  <PlusSquare className=" text-secondary" size={18} />
+                  <h4 className=" text-secondary text-sm">New Desk</h4>
+                </div>
               </button>
-              <button className=" justify-center gap-2 items-center flex py-[5px] my-1 rounded-md">
-                <PlusSquare size={18} className=" text-purple-500" />
+              <button className="group">
+                <div className=" flex items-center justify-center gap-2 bg-purple-200 py-2 px-2 rounded-md hover:-translate-y-1 duration-200 hover:bg-purple-500">
+                  <History className=" text-secondary" size={18} />
+                  <h4 className=" text-secondary text-sm">History</h4>
+                </div>
               </button>
-            </div>
-          </div>
-        </div>
-
-        <div className=" flex-1 mt-5 mx-5">
-          <div className=" flex w-max py-1 rounded-md bg-text1 gap-2 justify-center items-center border-text1 border-[1px]">
-            <input
-              className=" bg-transparent text-xs p-1 mx-2"
-              placeholder="Search something here .."
-            />
-            <Search className=" text-purple-500 mx-2" size={18} />
-          </div>
-          <h3 className=" text-black font-semibold mt-5">Music List</h3>
-
-          <div className=" mt-3 flex flex-wrap gap-5">
-            <div className=" h-64 w-44 bg-text1 rounded-md">
-              <img src={mavric} className=" h-[70%] rounded-t-md" />
-            </div>
-
-            <div className=" h-64 w-44 bg-text1 rounded-md">
-              <img src={mavric} className=" h-[70%] rounded-t-md" />
-            </div>
-
-            <div className=" h-64 w-44 bg-text1 rounded-md">
-              <img src={mavric} className=" h-[70%] rounded-t-md" />
             </div>
           </div>
         </div>
