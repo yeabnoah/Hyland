@@ -26,7 +26,8 @@
     "@types/electron": "^1.6.10",
     "electron-updater": "^6.1.7",
     "lucide-react": "^0.383.0",
-    "patch-package": "^8.0.0"
+    "patch-package": "^8.0.0",
+    "react-magic-motion": "^1.1.2"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
