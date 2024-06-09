@@ -30,13 +30,21 @@ const DeskHistory: FC = () => {
       <h2 className=" font-semibold text-lg text-purple-500">Desk History</h2>
 
       <motion.div variants={image} className=" justify-center flex items-center">
-        <img src={notFound} className=" h-44 w-max mt-[20%] justify-center items-center" />
+        <img
+          src={notFound}
+          className=" mid:h-44 w-max my-[20%] mid:mt-[20%] mid:mb-[5%] justify-center items-center h-32"
+        />
       </motion.div>
       <div className=" justify-center flex items-center">
         <div>
-          <h4 className=" text-gray-200 mt-5">you dont have a desk history yet</h4>
-          <button onClick={() => [setPage('History')]} className="group mx-10 mt-2">
-            <div className=" flex items-center justify-center gap-2 bg-purple-200 py-1 px-2 rounded-md hover:-translate-y-1 duration-200 hover:bg-purple-500">
+          <h4 className=" text-gray-200 mt-5 text-center">No Desk History</h4>
+          <button
+            onClick={() => {
+              setPage('Add')
+            }}
+            className="group mx-10 mt-2"
+          >
+            <div className=" flex items-center justify-center gap-2 bg-purple-400 py-2 px-2 rounded-md hover:-translate-y-1 duration-200 hover:bg-purple-500">
               <PlusSquare className=" text-secondary" size={18} />
               <h4 className=" text-secondary text-sm">Create New Desk</h4>
             </div>

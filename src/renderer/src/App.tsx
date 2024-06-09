@@ -20,7 +20,7 @@ function App(): JSX.Element {
         <div className="h-full hidden sm:w-56 md:flex flex-col transition-transform transform px-5 py-5 bg-[#1A2130]">
           <div className=" flex justify-start items-center text-gray-200 gap-2">
             <Flame className=" text-purple-400" />
-            <h4 className="  text-purple-400">Test</h4>
+            <h4 className="  text-purple-400">Productive Nerd</h4>
           </div>
 
           <div className=" mt-7 flex gap-2 items-center">
