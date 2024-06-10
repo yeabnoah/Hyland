@@ -3,6 +3,7 @@ import NewDesk from '@renderer/components/NewDesk'
 import { FC } from 'react'
 import DeskHistory from './deskHistory'
 import AddDesk from './AddDesk'
+import Reader from './Reader'
 // import {usePage}
 
 const ReturnMain: FC = () => {
@@ -18,6 +19,8 @@ const ReturnMain: FC = () => {
       return <DeskHistory />
     case 'Add':
       return <AddDesk />
+    case 'Reader':
+      return <Reader />
     default:
       return <NewDesk />
   }

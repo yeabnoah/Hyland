@@ -17,7 +17,7 @@ function App(): JSX.Element {
   return (
     <>
       <div className=" flex bg-cover h-screen w-screen">
-        <div className="h-full hidden sm:w-56 md:flex flex-col transition-transform transform px-5 py-5 bg-[#1A2130]">
+        <div className="h-full hidden sm:w-56 md:flex flex-col transition-transform transform px-5 py-5 bg-[#404258]">
           <div className=" flex justify-start items-center text-gray-200 gap-2">
             <Flame className=" text-purple-400" />
             <h4 className="  text-purple-400">Productive Nerd</h4>
@@ -47,7 +47,12 @@ function App(): JSX.Element {
             </div>
 
             <div className="group">
-              <button className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300">
+              <button
+                onClick={() => {
+                  setPage('Reader')
+                }}
+                className="parent flex gap-2 items-center rounded-md justify-start px-5 py-2 duration-300"
+              >
                 <FileText
                   className="child group-hover:text-purple-400 group-hover:text-lg text-gray-200 group-hover:-translate-y-1 duration-300"
                   size={17}
